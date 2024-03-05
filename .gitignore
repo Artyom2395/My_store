@@ -1,5 +1,5 @@
 .vscode
 db.sqlite3
-media
+media/users_images
 .env
 __pycache__
