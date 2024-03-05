@@ -12,10 +12,10 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
-from environs import Env
+#from environs import Env
 
-env = Env() 
-env.read_env() 
+#env = Env() 
+#env.read_env() 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -25,13 +25,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = env('SECRET_KEY')
+SECRET_KEY = 'django-insecure-5@4=-)&8w%^*c8+p=$2ua(t_q5w)lwf=$e!nejrt*qq3c&+b!('
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = env('DEBUG')
+DEBUG = True
 
 ALLOWED_HOSTS = []
-DOMAIN_NAME = env('DOMAIN_NAME')
+DOMAIN_NAME = 'http://localhost:8000'
 
 
 # Application definition
@@ -103,11 +103,11 @@ INTERNAL_IPS = [
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql_psycopg2",
-        'NAME': env('DATABASES_NAME'),
-        'USER': env('DATABASES_USER'),
-        'PASSWORD': env('DATABASES_PASSWORD'),
-        'HOST': env('DATABASES_HOST'),
-        'PORT': env('DATABASES_PORT'),
+        'NAME': 'store_db',
+        'USER': 'store_username',
+        'PASSWORD': 'store_password',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
